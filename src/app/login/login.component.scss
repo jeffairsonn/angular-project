@@ -1,0 +1,65 @@
+.container{
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0 auto;
+    
+    &__loginbox{
+        height: fit-content;
+        padding: 24px;
+        width: 100%;
+        max-width: 300px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        &--title{
+            color: white;
+        }
+        &--inputcontainer{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+
+            &-label{
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            &-input{
+                padding: 16px;
+                height: 20px;
+                color:black;
+                font-size: 14px;
+            }
+
+        }
+        &--subscribe{
+            color: white;
+            text-align: center;
+
+            .subscribe{
+                text-decoration: underline;
+                cursor: pointer;
+                color: white;
+            }
+        }
+
+        &--button{
+            padding: 12px;
+            font-size: 14px;
+            background-color: grey;
+            color: white;
+            border: none;
+            margin-top: 8px;
+            margin-bottom: 8px;
+
+            &:hover{
+                background-color: brown;
+                cursor: pointer;
+            }
+        }
+    }
+}

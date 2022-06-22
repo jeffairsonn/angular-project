@@ -1,0 +1,15 @@
+<div class="container">
+    <form (ngSubmit)="login()" class="container__loginbox">
+        <h1 class="container__loginbox--title">Connexion</h1>
+        <div class="container__loginbox--inputcontainer">
+            <label class="container__loginbox--inputcontainer-label"  for="">Email :</label>
+            <input class="container__loginbox--inputcontainer-input" name="email" type="email" [(ngModel)]="email">
+        </div>
+        <div class="container__loginbox--inputcontainer">
+            <label class="container__loginbox--inputcontainer-label" for="">Mot de passe :</label>
+            <input class="container__loginbox--inputcontainer-input" name="password" type="password" [(ngModel)]="password">
+        </div>
+        <button class="container__loginbox--button" type="submit">Se connecter</button>
+        <p class="container__loginbox--subscribe">Pas encore de compte ? <a [routerLink]="['/subscribe']" class="subscribe">Inscrivez-vous</a></p>
+    </form>  
+</div>
