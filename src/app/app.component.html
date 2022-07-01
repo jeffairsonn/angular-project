@@ -1,7 +1,7 @@
 <div class="header">
   <h2 class="header__logo">
     <a *ngIf="isAuth" (click)="checkiFiSAuth()" class="header__logo--link" [routerLink]="['/']">JEFF COURSES</a>
-    <a *ngIf="!isAuth" (click)="checkiFiSAuth()" class="header__logo--link" [routerLink]="['/login']">Le Jeff Quizz</a>
+    <a *ngIf="!isAuth" (click)="checkiFiSAuth()" class="header__logo--link" [routerLink]="['/login']">JEFF COURSES</a>
   </h2>
   <div class="header__buttons">
     <button *ngIf="!isAuth" [routerLink]="['/login']" class="header__buttons--button">Connexion</button>

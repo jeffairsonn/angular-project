@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "heroku-postbuild": "ng build — prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -43,6 +44,7 @@
     "typescript": "~4.6.2"
   },
   "engines": {
-    "node": "6.11.1"
+    "node": "6.11.1",
+    "npm": "x.x.x" 
   }
 }
