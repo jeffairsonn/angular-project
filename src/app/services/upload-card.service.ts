@@ -7,6 +7,7 @@ const backUrl = "http://localhost:8000"
 @Injectable({
   providedIn: 'root'
 })
+
 export class UploadCardService {
   constructor(private http: HttpClient) { }
 
@@ -28,5 +29,17 @@ export class UploadCardService {
 
   getCards(user_id: string): Observable<Array<{name: string, description: string, image: string }>> {
     return this.http.get<Array<{name: string, description: string, image: string }>>(`${backUrl}/api/course/${user_id}`);
+  }
+
+  getOneCard(course_id: string): Observable<{name: string, description: string, image: string }> {
+    return this.http.get<{name: string, description: string, image: string }>(`${backUrl}/api/course/getone/${course_id}`);
+  }
+
+  deleteCard(course_id: string) {
+    return this.http.delete(`${backUrl}/api/course/delete/${course_id}`);
+  }
+
+  updateCard(course_id: string, name: string) {
+    return this.http.put(`${backUrl}/api/course/update/${course_id}`, {name});
   }
 }

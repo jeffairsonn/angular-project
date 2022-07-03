@@ -6,7 +6,7 @@
         </div>
         <div class="dashboard__courses--list">
             <div *ngFor="let item of listOfCards | keyvalue">
-                <app-course-card [name]="item.value.name" [description]="item.value.description" [image]="item.value.image"></app-course-card>
+                <app-course-card [name]="item.value.name" [description]="item.value.description" [image]="item.value.image" [id]="item.value._id"></app-course-card>
             </div>
         </div>
     </div>

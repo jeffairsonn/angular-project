@@ -17,12 +17,14 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { ModalAddCardComponent } from './modal-add-card/modal-add-card.component';
+import { QuestionCardComponent } from './question-card/question-card.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'subscribe', component: SubscribeComponent },
+  { path: 'dashboard/:id', component: QuestionCardComponent },
 ];
 
 @NgModule({
@@ -33,6 +35,7 @@ const routes: Routes = [
     DashboardComponent,
     CourseCardComponent,
     ModalAddCardComponent,
+    QuestionCardComponent,
   ],
   imports: [
     BrowserModule,
